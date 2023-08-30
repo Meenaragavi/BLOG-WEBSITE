@@ -1,0 +1,171 @@
+<!doctype html>
+<html>
+<style>
+nav
+{
+  float:right;
+}
+.password::placeholder
+{
+font-size:18px;
+}
+.inputname::placeholder
+{
+  font-size:18px;
+}
+body
+{
+  margin:0px;
+  paddding:0px;
+}
+input
+{
+  height:40px;
+  width:200px;
+}
+form
+{
+  padding:5px 20px 50px 30px;
+  margin:10% auto;
+}
+.firstdiv
+{
+   height:100%;
+   width:100%;
+   background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+   animation: gradient 1s linear infinite;
+   background-size:cover;
+   position:absolute;
+}
+@keyframes gradient
+{
+
+}
+.formdiv
+{
+  height:560px;
+  width:460px;
+  position:relative;
+  margin:5% auto;
+  background:#fff;
+  padding:5px;
+  margin-top:20px;
+  margin-bottom:5px;
+}
+.btn-box
+{
+  width:260px;
+  margin:35px auto;
+  position:relative;
+  box-shadow:0 0 20px 9px #ff61241f;
+  border-radius:30px;
+  background-image: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+  animation: Gradient 15s ease infinite;
+}
+.btn-box1
+{
+  width:160px;
+  margin:35px auto;
+  position:relative;
+  box-shadow:0 0 20px 9px #ff61241f;
+  border-radius:20px;
+  background-image: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+  animation: Gradient 15s ease infinite;
+}
+
+.login-btn,.register-btn,.submit-btn
+{
+  padding: 10px 30px;
+  cursor:pointer;
+  border: 0;
+  outline: none;
+  position:relative;
+  background:none;
+  color:white;
+}
+
+</style>
+<head>
+<title> My webpage </title>
+</head>
+
+<body>
+<div class="firstdiv">
+<BR>
+<bR>
+<center style="font-size:35px; font-weight:400; color:#fff;"> LOGIN PAGE</center>
+    <div class="formdiv">
+        <div class="btn-box">
+          <div class="btn">
+             <a href="login.html">
+              <button type="button" class="login-btn"> &nbsp;LOG IN </button>
+             </a>
+<a href="register.html"> <button type="button" class="register-btn"> REGISTER </BUTTON>
+</a>  </div>
+        </div>
+<form class="formname" align="center"; action=>
+<label class="label_name" id="label1" style="text-align:left;
+ font-size:24px;">
+
+USERNAME: 
+<input class="inputname" type='text' id="name" placeholder="Name">
+</label>
+<br>
+<br>
+<label class="label_name" style="text-align:left;font-size:24px;">
+PASSWORD:
+<input type='password' class="password" id="Password" placeholder="Password">
+</label>
+<br>
+<br>
+<br>
+<div class="captcha">
+<input type="text" id="cap1" style="background-color:#d6d6d6;"/>&nbsp;&nbsp;&nbsp;&nbsp;
+<button onclick="refresh()">REFRESH</button>
+<br> <br>
+<label for="cap" style="text-align:left;font-size:20px;">ENTER THE CAPTCHA:&nbsp;</label>
+<input type="text" id="cap" name="cap" style="background-color:white;height:40px;
+  width:150px; text-align:center;"/>
+<br> <br> 
+<button onclick="validate()">Submit</button>
+</div>
+<script>
+function refresh()
+{
+let alphaNums = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+document.getElementById("cap1").value=alphaNums[Math.floor(Math.random() * alphaNums.length)]+alphaNums[Math.floor(Math.random() * alphaNums.length)]+alphaNums[Math.floor(Math.random() * alphaNums.length)]+alphaNums[Math.floor(Math.random() * alphaNums.length)]+alphaNums[Math.floor(Math.random() * alphaNums.length)]+alphaNums[Math.floor(Math.random() * alphaNums.length)]+alphaNums[Math.floor(Math.random() * alphaNums.length)];
+}
+let alphaNums = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+document.getElementById("cap1").value=alphaNums[Math.floor(Math.random() * alphaNums.length)]+alphaNums[Math.floor(Math.random() * alphaNums.length)]+alphaNums[Math.floor(Math.random() * alphaNums.length)]+alphaNums[Math.floor(Math.random() * alphaNums.length)]+alphaNums[Math.floor(Math.random() * alphaNums.length)]+alphaNums[Math.floor(Math.random() * alphaNums.length)]+alphaNums[Math.floor(Math.random() * alphaNums.length)];
+function validate()
+{
+  str1=document.getElementById("cap1").value;
+  str2=document.getElementById("cap").value;
+  if(str1==str2)
+  {
+      window.alert("YOU ARE VERIFIED SUCCESSFULLY");
+  }
+  else
+  {
+      window.alert("YOU ARE NOT VERIFIED SUCCESSFULLY");
+  }
+
+}
+</script>
+<div class="btn-box1">
+<center>
+<a href="web1.html">
+<button class="submit-btn" style="font-size:16px">LOGIN</button>
+</a>
+</center>
+</div>
+<a href="register.html" style="text-decoration:none; background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+  animation: Gradient 15s ease infinite;-webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;font-size:20px;">
+Are you a new user?</a>
+</center>
+</form>
+    </div>
+</div>
+</body>
+</html>

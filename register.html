@@ -1,0 +1,151 @@
+<!doctype html>
+<html>
+<style>
+input:focus {
+  background: none;
+ border:0;
+    border-bottom:2px solid black;
+blackground:transparent;
+
+}
+.inputname {
+  border:0;
+    border-bottom:2px solid black;
+blackground:transparent;
+
+}
+.password::placeholder
+{
+font-size:18px;
+}
+.email::placeholder
+{
+font-size:18px;
+}
+.inputname::placeholder
+{
+  font-size:18px;
+}
+body
+{
+  margin:0px;
+  paddding:0px;
+}
+input
+{
+  height:40px;
+  width:200px;
+}
+form
+{
+  padding:5px 20px 50px 30px;
+  margin:10% auto;
+}
+.firstdiv
+{
+   height:100%;
+   width:100%;
+   background-image:linear-gradient(to right,red,orange);
+   background-size:cover;
+   position:absolute;
+}
+.formdiv
+{
+  height:480px;
+  width:460px;
+  position:relative;
+  margin:3% auto;
+  background:#fff;
+  padding:5px;
+  border:10px solid black;
+}
+.btn-box
+{
+  width:260px;
+  margin:35px auto;
+  position:relative;
+  box-shadow:0 0 20px 9px #ff61241f;
+  border-radius:30px;
+  background-image:linear-gradient(to right,red,orange);
+}
+.btn-box1
+{
+  width:160px;
+  margin:35px auto;
+  position:relative;
+  box-shadow:0 0 20px 9px #ff61241f;
+  border-radius:20px;
+  background-image:linear-gradient(to right,red,orange);
+}
+
+.login-btn,.register-btn,.submit-btn
+{
+  padding: 10px 30px;
+  cursor:pointer;
+  border: 0;
+  outline: none;
+  position:relative;
+  background:none;
+  color:white;
+}
+
+</style>
+<head>
+<title> My webpage </title>
+</head>
+
+<body>
+<div class="firstdiv">
+<br><br>
+<center style="font-size:35px; color:white;font-weight:400;"> REGISTER PAGE</center>
+  
+    <div class="formdiv">
+        <div class="btn-box">
+          <div class="btn">
+<a href="login.html">
+              <button type="button" class="login-btn"> &nbsp;LOG IN </button>
+             </a>
+<a href="register.html"> <button type="button" class="register-btn" onclick="register.html"> REGISTER </BUTTON>
+</a>          
+</div>
+        </div>
+<form class="formname" align="center" action="web1.html">
+<label class="label_name" id="label1" style="text-align:left;
+ font-size:24px;">
+USERNAME: 
+<input class="inputname" type='text' id="name" placeholder="Create Username">
+</label>
+<br>
+<br>
+<label class="label_name" style="text-align:left; font-size:24px;">
+EMAIL ID:&nbsp;&nbsp;&nbsp;&nbsp;
+<input type='password' class="password" id="Password" placeholder="Enter your mail id" >
+</label>
+<br>
+<br>
+<label class="label_name" style="text-align:left; font-size:24px;">
+PASSWORD:
+
+<input type='email' class="email" id="email" placeholder="Create Password">
+</label>
+
+
+<br>
+<center>
+        <div class="btn-box1">
+<a href="web1.html">
+<button class="submit-btn" style="color:white; font-size:18px;text-decoration:none;">REGISTER</button>
+</a></div>
+<a href="login.html" style="text-decoration:none; background: linear-gradient(to right,red,orange);
+  animation: Gradient 15s ease infinite;-webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;font-size:20px">Already have a account?</a>
+</center>
+
+</form>
+    </div>
+
+</div>
+
+
+</body>
+</html>
